@@ -1,0 +1,29 @@
+package com.example.demo.que_3;
+
+import jakarta.validation.constraints.*;
+
+public class StudentDTO {
+
+    @NotBlank(message = "Name must not be blank")
+    private String name;
+
+    @Min(value = 18, message = "Age must be 18 or above")
+    private int age;
+
+    // Getters and Setters
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
